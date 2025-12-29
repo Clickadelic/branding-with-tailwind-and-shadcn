@@ -1,13 +1,16 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-
-export function meta({}: Route.MetaArgs) {
+import AppLayout from "../layouts/app-layout";
+export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Branding Tailwind with Shadcn" },
+    { name: "description", content: "A branded app using Tailwind CSS and Shadcn UI" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <AppLayout>
+      Home
+    </AppLayout>
+  );
 }
