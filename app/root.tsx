@@ -9,8 +9,11 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+interface RootProps {
+  children: React.ReactNode;
+}
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: RootProps) {
   return (
     <html lang="en" className="h-screen">
       <head>
